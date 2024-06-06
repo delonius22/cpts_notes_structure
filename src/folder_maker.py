@@ -41,10 +41,10 @@ def note_maker(box,dir,box_ip):
                     os.makedirs(os.path.join(box_ip_dir,val))
     else:
         print("Please specify the box type")
-        return
     
 
     if __name__ == '__main__':
+        print(__name__)
         dirs=['/Users/deangelofloyd/Documents/sublime_data','/Users/deangelofloyd/Documents/obsidian_files/HTB_Machines']
         user_box = input("Enter the box name: ")
         user_box_ip = input("Enter the box ip, if you dont know it enter 0.0.0.0: ")
