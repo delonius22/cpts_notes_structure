@@ -25,6 +25,11 @@ def note_maker(box,dir,box_ip):
             for val in ['exploits','loot','scans']:
                 if not os.path.exists(os.path.join(box_ip_dir,val)):
                     os.makedirs(os.path.join(box_ip_dir,val))
+            scan_dir = os.path.join(box_ip_dir,'scans')
+            if not os.path.exists(os.path.join(scan_dir,'active')):
+                os.makedirs(os.path.join(scan_dir,'active'))
+            if not os.path.exists(os.path.join(scan_dir,'passive')):
+                os.makedirs(os.path.join(scan_dir,'passive'))
     elif 'obsidian' in new_box:
         for vals in ['enum','exploit','loot','privesc','Things Ive Learned']:
             if not os.path.exists(os.path.join(new_box,vals)):
@@ -39,6 +44,11 @@ def note_maker(box,dir,box_ip):
             for val in ['exploits','loot','scans']:
                 if not os.path.exists(os.path.join(box_ip_dir,val)):
                     os.makedirs(os.path.join(box_ip_dir,val))
+            scan_dir = os.path.join(box_ip_dir,'scans')
+            if not os.path.exists(os.path.join(scan_dir,'active')):
+                os.makedirs(os.path.join(scan_dir,'active'))
+            if not os.path.exists(os.path.join(scan_dir,'passive')):
+                os.makedirs(os.path.join(scan_dir,'passive'))    
     else:
         print("Please specify the box type")
     
