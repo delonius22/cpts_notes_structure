@@ -40,24 +40,24 @@ def test_file(box,dir,box_ip):
                                     if not os.path.exists(os.path.join(new_box,key,k,item)):
                                         os.makedirs(os.path.join(new_box,key,k,item))
                                     else:
-                                        print(f"Box {os.path.join(new_box,key,k,item)} already exists")
+                                        pass
         
                 elif isinstance(val,list):
                     for item in val:
                         if not os.path.exists(os.path.join(new_box,key,item)):
                             os.makedirs(os.path.join(new_box,key,item))
                         else:
-                            print(f"Box {os.path.join(new_box,key,item)} already exists")
+                            pass
         else:
-            print(f"Box {os.path.join(new_box,key)} already exists")
+            pass
     
 
 if __name__ == '__main__':
-    main_doc = '<path to your docs>'
+    MAIN_DOC = '<path to your docs>'
     dirs=['VulnHub','HTB']
     user_box = input("Enter the box name: ")
     user_box_ip = input("Enter the box ip, if you dont know it enter 0.0.0.0: ")
     for dir in dirs:
-        working_dir = os.path.join(main_doc,dir)
+        working_dir = os.path.join(MAIN_DOC,dir)
         test_file(user_box,working_dir,user_box_ip)
     
