@@ -40,7 +40,7 @@ def note_maker(box,dir,box_ip):
         print(f"Box {os.path.join(enum_dir,'results')} already exists")
 
 if __name__ == '__main__':
-    main_doc = '{your main directory here}'
+    main_doc = '/Users/deangelofloyd/Documents/obsidian_files'
     dirs=['VulnHub','HTB']
     user_box = input("Enter the box name: ")
     user_box_ip = input("Enter the box ip, if you dont know it enter 0.0.0.0: ")
