@@ -13,7 +13,7 @@ def note_maker(box,dir,box_ip):
         print(f"Box {box} already exists")
         return
     
-    for val in ['enum','exploit','loot','privesc','Things Ive Learned']:
+    for val in ['enum','exploit','loot','privesc','Things Ive Learned','screenshots']:
         if not os.path.exists(os.path.join(new_box,val)):
             os.makedirs(os.path.join(new_box,val))
         else:
@@ -26,6 +26,11 @@ def note_maker(box,dir,box_ip):
         for val in ['exploits','loot','scans']:
             if not os.path.exists(os.path.join(box_ip_dir,val)):
                 os.makedirs(os.path.join(box_ip_dir,val))
+        exploit_dir = os.path.join(box_ip_dir,'exploits')
+        if not os.path.exists(os.path.join(exploit_dir,'successful_exploits')):
+            os.makedirs(os.path.join(exploit_dir,'successful_exploits'))
+        if not os.path.exists(os.path.join(exploit_dir,'failed_exploits')):
+            os.makedirs(os.path.join(exploit_dir,'failed_exploits'))
         scan_dir = os.path.join(box_ip_dir,'scans')
         if not os.path.exists(os.path.join(scan_dir,'active')):
             os.makedirs(os.path.join(scan_dir,'active'))
